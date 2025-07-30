@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnteMarriage - Kerala Matrimony Theme Preview</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* CSS Variables for easy customization */
+        :root {
+            --primary-color: #e65100;
+            --secondary-color: #28a745;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .main-header {
+            background: #1a1a1a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ff9800 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .hero-section .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .hero-section .contact-info span {
+            margin-right: 20px;
+            font-size: 1.2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons a {
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .btn-register {
+            background: #fff;
+            color: var(--primary-color);
+        }
+
+        .btn-login {
+            background: var(--primary-color);
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-register:hover {
+            background: #f0f0f0;
+        }
+
+        .btn-login:hover {
+            background: #d84315;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .about-section .text-center {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 60px;
+        }
+
+        .features-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            margin-bottom: 40px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 60px 0 20px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+        }
+
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .app-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .app-buttons a {
+            background: #333;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #ccc;
+            margin: 0;
+        }
+
+        .footer-bottom a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .about-section h2,
+            .features-section h2 {
+                font-size: 2rem;
+            }
+
+            .main-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* Login Popup */
+        .login-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-popup.active {
+            display: flex;
+        }
+
+        .login-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #e65100;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .register-link a {
+            color: #e65100;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#"><h1>EnteMarriage</h1></a>
+                </div>
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <a href="#" onclick="toggleContactInfo(); return false;">📞 Contact Us</a>
+                    <a href="#" onclick="toggleLoginPopup(); return false;">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Join the best Kerala Matrimonial – Find Your Perfect Match Today!</h1>
+            <p>Make your aspirations a reality – register for free at EnteMarriage Matrimony.</p>
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <span>📞 +91 9544146660</span>
+                <span>📧 info@entemarriage.com</span>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="hero-buttons">
+                <a href="#register" class="btn-register">Register</a>
+                <a href="#" onclick="toggleLoginPopup(); return false;" class="btn-login">Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>EnteMarriage, An Exclusive Kerala Marriage Matrimony For You</h2>
+                <p>Your Trusted Kerala Matrimony. ISO Certified, it's the No.1 choice for brides and grooms in Kerala for their way to marriage. With advanced web and mobile features, we assure profile genuineness through manual verification. Our dedicated support and Elite service make finding your partner forever easier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Register Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Why register in EnteMarriage Matrimony?</h2>
+            
+            <div class="features-content">
+                <div class="feature-item">
+                    <h3>🔐 1. Private, Safe & Handpicked – Not a Public Display</h3>
+                    <p>EnteMarriage isn't a place where anyone can browse you. Only verified, serious profiles get access — and your privacy stays fully in your control. "Every introduction is made with dignity and purpose."</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>🎥 2. Real Introductions, Not Just Photos</h3>
+                    <p>With voice and video bios, show who you really are. Your smile, your words, your vibe — because choosing a life partner is more than just swiping through photos. "Let them hear your voice. Not just read your stats."</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>🎯 3. We Don't Just List — We Curate</h3>
+                    <p>Every profile is reviewed, guided, and matched with care. We give you the best, not the most — because you deserve quality, not quantity. "At EnteMarriage, your future isn't found by chance — it's chosen with care."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>EnteMarriage</h3>
+                    <p>EnteMarriage™: The ISO Certified Kerala matrimony platform for your perfect match. The trusted choice for brides and grooms in Kerala seeking their life partner, our profiles are 100% manually verified.</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📺</a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#register">Register Free</a></li>
+                        <li><a href="#search">Search Profiles</a></li>
+                        <li><a href="#success">Success Stories</a></li>
+                        <li><a href="#assisted">Assisted Service</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 9544146660</p>
+                    <p>📧 info@entemarriage.com</p>
+                    <p>📍 Kochi, Kerala, India</p>
+                </div>
+                
+                <!-- Mobile App -->
+                <div class="footer-section">
+                    <h4>Download Mobile App</h4>
+                    <p>Get the EnteMarriage app for a better experience</p>
+                    <div class="app-buttons">
+                        <a href="#">📱 Google Play</a>
+                        <a href="#">🍎 App Store</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>© 2025 EnteMarriage. All rights reserved. | 
+                    <a href="#privacy">Privacy Policy</a> | 
+                    <a href="#terms">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Popup -->
+    <div class="login-popup" id="loginPopup">
+        <div class="login-form">
+            <span class="close-popup" onclick="toggleLoginPopup()">×</span>
+            <h2 style="text-align: center; margin-bottom: 30px; color: #333;">Login</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Username / Email / Phone Number</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p class="register-link">Don't have an account? <a href="#register">Register Now</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Info (Hidden by default) -->
+    <div id="contact-info" style="display: none; position: fixed; top: 80px; right: 20px; background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <p style="margin: 0; color: #333; margin-bottom: 10px;">📞 +91 9544146660</p>
+        <p style="margin: 0; color: #333;">📧 info@entemarriage.com</p>
+    </div>
+
+    <script>
+        function toggleLoginPopup() {
+            const popup = document.getElementById('loginPopup');
+            popup.classList.toggle('active');
+        }
+
+        function toggleContactInfo() {
+            const contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+                contactInfo.style.display = 'block';
+                setTimeout(() => {
+                    contactInfo.style.display = 'none';
+                }, 3000);
+            } else {
+                contactInfo.style.display = 'none';
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Demo account check
+            if (username === 'demo@entemarriage.in' && password === 'demo1234') {
+                alert('Demo login successful!');
+                toggleLoginPopup();
+            } else {
+                alert('Invalid credentials. Try demo account:\nUsername: demo@entemarriage.in\nPassword: demo1234');
+            }
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('loginPopup').addEventListener('click', function(event) {
+            if (event.target === this) {
+                toggleLoginPopup();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#' && !this.onclick) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
