@@ -510,18 +510,10 @@
                     <h4>Contact Info</h4>
                     <p>📞 +91 9544146660</p>
                     <p>📧 info@entemarriage.com</p>
-                    <p>📍 Kochi, Kerala, India</p>
+                    <p>📍 Konni, Kerala, India</p>
                 </div>
                 
                 <!-- Mobile App -->
-                <div class="footer-section">
-                    <h4>Download Mobile App</h4>
-                    <p>Get the EnteMarriage app for a better experience</p>
-                    <div class="app-buttons">
-                        <a href="#">📱 Google Play</a>
-                        <a href="#">🍎 App Store</a>
-                    </div>
-                </div>
             </div>
             
             <!-- Bottom Bar -->
@@ -585,8 +577,11 @@
 
             // Demo account check
             if (username === 'demo@entemarriage.in' && password === 'demo1234') {
-                alert('Demo login successful!');
+                alert('Demo login successful! Redirecting to dashboard...');
                 toggleLoginPopup();
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 1000);
             } else {
                 alert('Invalid credentials. Try demo account:\nUsername: demo@entemarriage.in\nPassword: demo1234');
             }
