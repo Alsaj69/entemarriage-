@@ -103,7 +103,7 @@
                 <!-- Registration Link -->
                 <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
                     <p style="color: #666; font-size: 14px; margin: 0;">
-                        Don't have an account? <a href="/register" style="color: #e65100; text-decoration: none; font-weight: bold;">Register Free</a>
+                        Don't have an account? <a href="template-register.php" style="color: #e65100; text-decoration: none; font-weight: bold;">Register Free</a>
                     </p>
                 </div>
             </form>

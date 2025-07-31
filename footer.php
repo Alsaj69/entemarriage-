@@ -20,7 +20,7 @@
             <div>
                 <h4 style="color: var(--primary-color, #e65100); margin-bottom: 20px;">Quick Links</h4>
                 <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 10px;"><a href="/register" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Register Free</a></li>
+                    <li style="margin-bottom: 10px;"><a href="template-register.php" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Register Free</a></li>
                     <li style="margin-bottom: 10px;"><a href="/search" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Search Profiles</a></li>
                     <li style="margin-bottom: 10px;"><a href="/success-stories" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Success Stories</a></li>
                     <li style="margin-bottom: 10px;"><a href="/assisted-service" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Assisted Service</a></li>

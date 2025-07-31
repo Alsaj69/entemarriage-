@@ -14,7 +14,7 @@
         
         <!-- Action Buttons -->
         <div style="display: flex; gap: 20px; justify-content: center;">
-            <a href="/register" style="background: #fff; color: var(--primary-color, #e65100); padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Register</a>
+            <a href="template-register.php" style="background: #fff; color: var(--primary-color, #e65100); padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Register</a>
             <a href="/login" style="background: var(--primary-color, #e65100); color: #fff; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.2rem; border: 2px solid #fff;">Login</a>
         </div>
     </div>
